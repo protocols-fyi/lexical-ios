@@ -28,6 +28,9 @@ let package = Package(
       name: "LexicalLinkPlugin",
       targets: ["LexicalLinkPlugin"]),
     .library(
+      name: "LexicalAutoLinkPlugin",
+      targets: ["LexicalAutoLinkPlugin"]),
+    .library(
       name: "LexicalInlineImagePlugin",
       targets: ["LexicalInlineImagePlugin"]),
     .library(
@@ -84,7 +87,12 @@ let package = Package(
       name: "LexicalLinkPluginTests",
       dependencies: ["Lexical", "LexicalLinkPlugin"],
       path: "./Plugins/LexicalLinkPlugin/LexicalLinkPluginTests"),
-
+    
+    .target(
+      name: "LexicalAutoLinkPlugin",
+      dependencies: ["Lexical", "LexicalLinkPlugin"],
+      path: "./Plugins/LexicalAutoLinkPlugin/LexicalAutoLinkPlugin"),
+  
     .target(
       name: "LexicalInlineImagePlugin",
       dependencies: ["Lexical", "SelectableDecoratorNode"],
