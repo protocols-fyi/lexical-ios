@@ -133,5 +133,10 @@ let package = Package(
         .product(name: "Markdown", package: "swift-markdown"),
       ],
       path: "./Plugins/LexicalMarkdown/LexicalMarkdownTests"),
+    
+      .target(
+        name: "LexicalMentions",
+        dependencies: ["Lexical"],
+        path: "./Plugins/LexicalMentionsPlugin/LexicalMentionsPlugin"),
   ]
 )
